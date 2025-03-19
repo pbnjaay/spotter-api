@@ -99,32 +99,7 @@ python run_dev_server.py
   ```
 - **Response**: Returns the created trip with all stops and ELD logs
 
-#### Get All Trips
 
-- **URL**: `/api/trips/`
-- **Method**: `GET`
-- **Description**: Returns a list of all trips
-- **Response**: List of trip objects with their stops and ELD logs
-
-#### Get Trip Details
-
-- **URL**: `/api/trips/{id}/`
-- **Method**: `GET`
-- **Description**: Returns details for a specific trip
-- **Response**: Trip object with all stops and ELD logs
-
-#### Update Trip
-
-- **URL**: `/api/trips/{id}/`
-- **Method**: `PUT`
-- **Description**: Updates a trip (note: this will not regenerate stops or ELD logs)
-- **Request Body**: Same as create trip
-
-#### Delete Trip
-
-- **URL**: `/api/trips/{id}/`
-- **Method**: `DELETE`
-- **Description**: Deletes a trip and all associated stops and ELD logs
 
 ### Route Planning Logic
 

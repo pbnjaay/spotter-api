@@ -10,8 +10,8 @@ django-cors-headers = "*"
 python-dotenv = "*"
 requests = "*"
 psycopg2 = "*"
-dj-database-url = "*"
 whitenoise = "*"
+dj-database-url = "*"
 
 [dev-packages]
 

@@ -3,7 +3,8 @@ from datetime import timedelta
 import requests
 from django.db import transaction
 from django.utils import timezone
-from rest_framework import status, viewsets
+from rest_framework import status, mixins
+from rest_framework.viewsets import GenericViewSet
 from rest_framework.response import Response
 
 from .models import ELDLog, RouteStop, Trip
@@ -13,7 +14,7 @@ from .utils import (DRIVING_DUTY_STATUS, DROP_OFF_STOP_TYPE, FUEL_STOP_TYPE,
                     REST_STOP_TYPE, SLEEPER_BERTH_DUTY_STATUS)
 
 
-class TripViewSet(viewsets.ModelViewSet):
+class TripViewSet(mixins.CreateModelMixin,GenericViewSet):
     queryset = Trip.objects.all()
     serializer_class = TripSerializer
 
